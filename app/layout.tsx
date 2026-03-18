@@ -1,7 +1,10 @@
 import type { Metadata } from "next";
 import { IBM_Plex_Serif, Inter, Mona_Sans } from "next/font/google";
-import "./globals.css";
 import { cn } from "@/lib/utils";
+
+
+import Navbar from "@/components/Navbar";
+import "./globals.css";
 
 const inter = Inter({subsets:['latin'],variable:'--font-sans'});
 
@@ -33,6 +36,7 @@ export default function RootLayout({
       <body
         className={`${ibmPlexSerif.variable} ${monaSans.variable} relative font-sans antialiased`}
       >
+        <Navbar/>
         {children}
       </body>
     </html>
